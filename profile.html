@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Калькулятор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Мій Калькулятор</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Про додаток</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Профіль</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Вхід</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Реєстрація</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Профіль користувача</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover mt-3">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" style="width: 30%">Ім'я:</th>
+                                        <td id="profName">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Email:</th>
+                                        <td id="profEmail">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Стать:</th>
+                                        <td id="profGender">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Дата народження:</th>
+                                        <td id="profDate">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Статус:</th>
+                                        <td><span class="badge bg-success">Активний</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-end mb-3 mt-3">
+                                <button id="editBtn" class="btn btn-outline-primary btn-sm me-2">Редагувати профіль</button>
+                                <button id="logoutBtn" class="btn btn-danger btn-sm">Вийти з акаунта</button>
+                            </div>
+
+                            <div id="editProfileSection" class="mt-4 p-3 border rounded bg-light" style="display: none;">
+                                <h5 class="mb-3">Редагування даних</h5>
+                                <form id="editProfileForm">
+                                    <div class="mb-3">
+                                        <label for="editName" class="form-label">Ім'я</label>
+                                        <input type="text" class="form-control" id="editName" required>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="editGender" class="form-label">Стать</label>
+                                            <select class="form-select" id="editGender">
+                                                <option value="male">Чоловіча</option>
+                                                <option value="female">Жіноча</option>
+                                                <option value="other">Інша</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mt-3 mt-md-0">
+                                            <label for="editDate" class="form-label">Дата народження</label>
+                                            <input type="date" class="form-control" id="editDate" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-sm w-100">Зберегти зміни</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0">© 2026 Лабораторна робота №2. Усі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
